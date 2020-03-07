@@ -1,43 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <!-- Layout and UI design by Jonas Schmedtmann -->
-        <meta charset="UTF-8">
-        <link href="https://fonts.googleapis.com/css?family=Lato:100,300,600" rel="stylesheet" type="text/css">
-        <link type="text/css" rel="stylesheet" href="style.css">
-        <title>Dice Game</title>
-    </head>
-    <body>
-    <div class="wrapper clearfix">
-        <div class="player-0-panel active">
-                <div class="player-name" id="name-0">Player 1</div>
-                <div class="player-score" id="score-0">43</div>
-                <div class="player-current-box">
-                    <div class="player-current-label">Current</div>
-                    <div class="player-current-score" id="current-0">11</div>
-                </div>
-            </div>
-            
-            <div class="player-1-panel">
-                <div class="player-name" id="name-1">Player 2</div>
-                <div class="player-score" id="score-1">72</div>
-                <div class="player-current-box">
-                    <div class="player-current-label">Current</div>
-                    <div class="player-current-score" id="current-1">0</div>
-                </div>
-            </div>
-            
-            <button class="btn-new"><i class="ion-ios-plus-outline"></i>New game</button>
-            <button class="btn-roll"><i class="ion-ios-loop"></i>Roll dice</button>
-            <button class="btn-hold"><i class="ion-ios-download-outline"></i>Hold</button>
-
-            <input type="text" placeholder="Final score" class="final-score"/>
-            
-            <img src="dice-5.PNG" alt="Dice" class="dice" id="dice-1">
-            <img src="dice-5.PNG" alt="Dice" class="dice" id="dice-2">
-
+<head>
+    <!-- Layout and UI design by Jonas Schmedtmann -->
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,600" rel="stylesheet" type="text/css">
+    <link type="text/css" rel="stylesheet" href="style.css">
+    <title>Dice Game</title>
+</head>
+<body>
+<div class="header">
+    <h1>DICE GAME</h1>
+</div>
+<div class="wrapper clearfix">
+    <div class="player-0-panel active">
+        <div class="player-name" id="name-0">Player 1</div>
+        <div class="player-score" id="score-0">43</div>
+        <div class="player-current-box">
+            <div class="player-current-label">Current</div>
+            <div class="player-current-score" id="current-0">11</div>
         </div>
-        
-        <script src="app.js"></script>
-    </body>
+    </div>
+
+    <div class="player-1-panel">
+        <div class="player-name" id="name-1">Player 2</div>
+        <div class="player-score" id="score-1">72</div>
+        <div class="player-current-box">
+            <div class="player-current-label">Current</div>
+            <div class="player-current-score" id="current-1">0</div>
+        </div>
+    </div>
+
+    <button class="btn-new"><i class="ion-ios-plus-outline"></i>New game</button>
+    <button class="btn-roll"><i class="ion-ios-loop"></i>Roll dice</button>
+    <button class="btn-hold"><i class="ion-ios-download-outline"></i>Hold</button>
+
+    <input type="text" placeholder="Final score" class="final-score"/>
+
+    <img src="dice-5.PNG" alt="Dice" class="dice" id="dice-1">
+    <img src="dice-5.PNG" alt="Dice" class="dice" id="dice-2">
+
+</div>
+<div class="game-rules">
+    <div>
+        <p class="p">The game has 2 players, playing in rounds. In each turn, a player rolls two dices as many times as he
+            whishes. Each result gets added to his ROUND score. But:</p>
+        <ul>
+            <li>If the player rolls a 1, all his ROUND score gets
+                lost. After that, it's the next player's turn.</li>
+            <li>A player looses score when rolling a 6 two times in a row. After that, it's the next player's turn.</li>
+            <li>A player looses score when rolling a 6 two times in a row. After that, it's the next player's turn.</li>
+            <li>When the two dices show the same number, the double of the result gets added to the ROUND score.</li>
+        </ul>
+        <p>The player can choose to 'Hold', which means that his ROUND
+            score gets added to his GLOBAL score. After that, it's the next player's turn. The first player to reach the entered final score
+            on GLOBAL score wins the game. When no final score is entered it is set to 100.</p>
+
+    </div>
+</div>
+<script src="app.js"></script>
+</body>
 </html>

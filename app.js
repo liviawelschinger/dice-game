@@ -68,8 +68,8 @@ function nextPlayer() {
     document.querySelector('.player-1-panel').classList.toggle('active');
 
     // Don't show the dice when next player begins
-    document.getElementById('dice-1').style.display = 'none';
-    document.getElementById('dice-2').style.display = 'none';
+   // document.getElementById('dice-1').style.display = 'none';
+   // document.getElementById('dice-2').style.display = 'none';
 }
 
 //document.querySelector('btn-roll').addEventListener('click', btn);

@@ -45,6 +45,65 @@ body {
     color: #555;
 }
 
+.header {
+    width: 80%;
+    position: absolute;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    top: 100px;
+    text-align: center;
+}
+
+.game-rules {
+    width: 80%;
+    position: absolute;
+   /* margin: auto;
+    left:0;
+    right:0;*/
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    top: 850px;
+    text-align: center;
+}
+
+.game-rules > div {
+    text-align: justify;
+}
+
+
+h1 {
+    font-family: Lato;
+    font-size: 30px;
+    color: #ffff;
+}
+
+h2 {
+    font-family: Lato;
+    font-size: 20px;
+    color: #ffff;
+}
+
+p {
+
+    font-family: Lato;
+    font-weight: 300;
+    color: #ffff;
+    line-height: 1.5em;
+
+}
+
+ul {
+    margin-left: 20px;
+}
+
+li {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    color: #ffff;
+}
+
 .wrapper {
     width: 1000px;
     position: absolute;
