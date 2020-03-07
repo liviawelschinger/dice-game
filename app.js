@@ -86,10 +86,10 @@ document.querySelector('.btn-roll').addEventListener('click', function () {
         // 2. Display the result
         var dice1DOM = document.getElementById('dice-1');
         dice1DOM.style.display = 'block';
-        dice1DOM.src = 'dice-' + dice1 + '.png';
+        dice1DOM.src = 'dice-' + dice1 + '.PNG';
         var dice2DOM = document.getElementById('dice-2');
         dice2DOM.style.display = 'block';
-        dice2DOM.src = 'dice-' + dice2 + '.png';
+        dice2DOM.src = 'dice-' + dice2 + '.PNG';
 
         // player looses score when rolling a 6 two times in a row
         if (previousDice === 6 && dice1 === 6) {
@@ -110,6 +110,8 @@ document.querySelector('.btn-roll').addEventListener('click', function () {
             }
             document.getElementById('current-' + activePlayer).textContent = roundScore;
         } else {
+            roundScore = 0;
+            document.getElementById('current-' + activePlayer).textContent = roundScore;
             nextPlayer();
         }
         previousDice = dice1 + dice2;
