@@ -130,7 +130,8 @@ function init() {
     roundScore = 0;
     activePlayer = 0; // O: player1 ; 1: player2
 
-    document.querySelector('.dice').style.display = 'none';
+    document.getElementById('dice-1').style.display = 'none';
+    document.getElementById('dice-2').style.display = 'none';
 
     document.getElementById('score-0').textContent = '0';
     document.getElementById('current-0').textContent = '0';
@@ -174,8 +175,9 @@ document.querySelector('.btn-hold').addEventListener('click', function () {
 
 
         if (scores[activePlayer] >= winningScore) {
+            document.getElementById('dice-1').style.display = 'none';
+            document.getElementById('dice-2').style.display = 'none';
             document.getElementById('name-' + activePlayer).textContent = 'Winner';
-            document.querySelector('.dice').style.display = 'none';
             // add the winner CSS class in order to display the winner more appealing
             document.querySelector('.player-' + activePlayer + '-panel').classList.add('winner');
             document.querySelector('.player-' + activePlayer + '-panel').classList.remove('active');
